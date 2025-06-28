@@ -79,7 +79,6 @@ SetBox is licensed under the [GNU General Public License v3.0](LICENSE).
 
 If you want to support me, I would be very grateful. 
 
-[**PayPal**](https://www.paypal.com/ncp/payment/7X44EWSM9KAVW)
-Or
+[**PayPal**](https://www.paypal.com/ncp/payment/7X44EWSM9KAVW), 
 Bitcion
 `1LksFFCP2HPdpVsUxfFmZShJFnLLrkZTro`
