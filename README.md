@@ -81,5 +81,5 @@ If you want to support me, I would be very grateful.
 
 [**PayPal**](https://www.paypal.com/ncp/payment/7X44EWSM9KAVW)
 Or
-Bitcion adresss
+Bitcion
 `1LksFFCP2HPdpVsUxfFmZShJFnLLrkZTro`
