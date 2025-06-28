@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <permission
+        android:name="com.yn.setbox.PLUGIN_PROVIDER_ACCESS"
+        android:protectionLevel="signature" />
+    <uses-permission
+        android:name="android.permission.WRITE_SECURE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission
+        android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions"/>
+    <application
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name">
+        <provider
+            android:name=".SettingsProvider"
+            android:authorities="com.yn.setbox.plugin.provider"
+            android:exported="true"
+            android:permission="com.yn.setbox.PLUGIN_PROVIDER_ACCESS" />
+    </application>
+</manifest>
