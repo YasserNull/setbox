@@ -34,6 +34,7 @@ object LocaleManager {
         return when (language) {
             AppLanguage.ENGLISH -> Locale("en")
             AppLanguage.ARABIC -> Locale("ar")
+            AppLanguage.TURKISH -> Locale("tr")
             AppLanguage.SYSTEM -> getSystemLocale()
         }
     }

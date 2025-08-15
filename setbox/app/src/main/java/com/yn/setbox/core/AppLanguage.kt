@@ -3,13 +3,16 @@ package com.yn.setbox.core
 enum class AppLanguage {
     SYSTEM,
     ENGLISH,
-    ARABIC;
+    ARABIC,
+
+    TURKISH;
 
     companion object {
         fun fromTag(tag: String?): AppLanguage {
             return when (tag) {
                 "en" -> ENGLISH
                 "ar" -> ARABIC
+                "tr" -> TURKISH
                 else -> SYSTEM
             }
         }
@@ -18,6 +21,7 @@ enum class AppLanguage {
             return when (language) {
                 ENGLISH -> "en"
                 ARABIC -> "ar"
+                TURKISH -> "tr"
                 SYSTEM -> null
             }
         }
