@@ -200,6 +200,7 @@ fun LanguageSettingsSection(onClick: () -> Unit) {
     val currentLanguageName = when (currentAppLanguage) {
         AppLanguage.ENGLISH -> stringResource(R.string.language_english)
         AppLanguage.ARABIC -> stringResource(R.string.language_arabic)
+        AppLanguage.TURKISH -> stringResource(R.string.language_turkish)
         AppLanguage.SYSTEM -> stringResource(R.string.language_system)
     }
 

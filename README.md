@@ -1,3 +1,5 @@
+**English** | [Türkçe](README_tr-TR.md)
+
 # SetBox
 ![Logo](https://github.com/YasserNull/setbox/blob/main/docs/images/logo.png)
 <p align="center">

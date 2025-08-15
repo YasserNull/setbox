@@ -22,6 +22,7 @@
     <string name="language">Language</string>
     <string name="language_english">English</string>
     <string name="language_arabic">Arabic</string>
+    <string name="language_turkish">Türkçe</string>
     <string name="language_system">System default</string>
     <string name="community_and_contribution">Community and Contribution</string>
     <string name="source_code">Source code</string>

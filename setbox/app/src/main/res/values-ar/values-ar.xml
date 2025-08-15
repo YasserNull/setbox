@@ -22,6 +22,7 @@
     <string name="language">اللغة</string>
     <string name="language_english">الإنجليزية</string>
     <string name="language_arabic">العربية</string>
+    <string name="language_turkish">Türkçe</string>
     <string name="language_system">افتراضي النظام</string>
     <string name="community_and_contribution">المجتمع والمساهمة</string>
     <string name="source_code">المصدر</string>
