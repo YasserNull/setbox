@@ -1,4 +1,4 @@
-[English](README.md) | **Türkçe**
+[English](README.md) | [العربية](README_ar-EG.md) | **Türkçe** 
 
 # SetBox
 ![Logo](https://github.com/YasserNull/setbox/blob/main/docs/images/logo.png)
