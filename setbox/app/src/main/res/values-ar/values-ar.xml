@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">SetBox</string>
-    <string name="installing_module">جاري تثبيت الوحدة…</string>
+    <string name="installing_module">جاري تثبيت الإضافة…</string>
     <string name="search">بحث</string>
-    <string name="no_modules_found">لم يتم العثور على وحدات. ابدأ بتثبيت واحدة من المستودع أو من ملف ZIP.</string>
+    <string name="no_modules_found">لم يتم العثور على إضافات. ابدأ بتثبيت واحدة من المستودع أو من ملف ZIP.</string>
     <string name="no_search_results">لم يتم العثور على نتائج بحث.</string>
-    <string name="module_apply_failed">فشل تطبيق إعدادات الوحدة.</string>
+    <string name="module_apply_failed">فشل تطبيق إعدادات الإضافة.</string>
     <string name="uninstall">إلغاء التثبيت</string>
     <string name="more_options">المزيد من الخيارات</string>
-    <string name="install_from_zip">تثبيت من ZIP</string>
+    <string name="install_from_zip">تثبيت من ملف ZIP</string>
     <string name="settings">الإعدادات</string>
     <string name="back">رجوع</string>
     <string name="theme">السمة</string>
     <string name="theme_light">فاتح</string>
     <string name="theme_dark">داكن</string>
-    <string name="theme_system">افتراضي النظام</string>
+    <string name="theme_system">افتراضي</string>
     <string name="black_theme">السمة السوداء</string>
     <string name="enable_material_you">استخدام ألوان النظام</string>
     <string name="hue_shift">إزاحة اللون</string>
@@ -26,24 +26,24 @@
     <string name="language_system">افتراضي النظام</string>
     <string name="community_and_contribution">المجتمع والمساهمة</string>
     <string name="source_code">المصدر</string>
-    <string name="contribute_to_modules">المساهمة في الوحدات</string>
+    <string name="contribute_to_modules">المساهمة في الإضافات</string>
     <string name="repository_url_not_found">لم يتم العثور على رابط المستودع.</string>
     <string name="repo_file_empty">ملف المستودع فارغ أو غير صالح.</string>
     <string name="repo_load_failed">فشل تحميل المستودع. تحقق من اتصالك بالإنترنت.</string>
     <string name="unknown_error_occurred">حدث خطأ غير معروف.</string>
-    <string name="raw_response_for_debugging">الاستجابة الخام (للتصحيح):</string>
-    <string name="repo_is_empty">المستودع عن بعد فارغ.</string>
-    <string name="all_modules_up_to_date">جميع الوحدات محدثة، أو لا توجد وحدات جديدة متاحة.</string>
+    <string name="raw_response_for_debugging">الاستجابة الكاملة (للتصحيح):</string>
+    <string name="repo_is_empty">المستودع فارغ.</string>
+    <string name="all_modules_up_to_date">جميع الإضافات محدثة، أو لا توجد إضافات جديدة متاحة.</string>
     <string name="downloading">جاري التنزيل…</string>
     <string name="retry">إعادة المحاولة</string>
     <string name="download">تنزيل</string>
-    <string name="screen_title_modules">الوحدات</string>
+    <string name="screen_title_modules">الإضافات</string>
     <string name="screen_title_repo">المستودع</string>
-    <string name="search_modules_placeholder">البحث عن وحدات…</string>
-    <string name="clear_search">مسح البحث</string>
+    <string name="search_modules_placeholder">البحث عن إضافات…</string>
+    <string name="clear_search">مسح سجل البحث</string>
     <string name="error_opening_link">خطأ في فتح الرابط: %1$s</string>
     <string name="invalid_repository_url">رابط المستودع غير صالح.</string>
-    <string name="plugin_not_installed_banner">البلوقن غير مثبت. انقر هنا للحصول عليه.</string>
+    <string name="plugin_not_installed_banner">المكون الإضافي غير مثبت. انقر هنا للحصول عليه.</string>
     <string name="app_not_activated_banner">التطبيق غير مفعل. انقر هنا للمساعدة.</string>
     <string name="select_language">اختر اللغة</string>
     <string name="close">إغلاق</string>
@@ -54,6 +54,6 @@
     <string name="activate_app_title">تفعيل SetBox</string>
     <string name="activate_app_description_adb">يتطلب SetBox صلاحية WRITE_SECURE_SETTINGS للعمل. يمكن منح هذه الصلاحية عبر ADB (Android Debug Bridge) على جهاز الكمبيوتر الخاص بك. قم بتوصيل جهازك وقم بتشغيل الأمر التالي:</string>
     <string name="github_details">GitHub لمزيد من التفاصيل</string>
-    <string name="install_success">تم تثبيت الوحدة بنجاح!</string>
-    <string name="install_failed">فشل تثبيت الوحدة.</string>
+    <string name="install_success">تم تثبيت الإضافة بنجاح!</string>
+    <string name="install_failed">فشل تثبيت الإضافة.</string>
 </resources>
