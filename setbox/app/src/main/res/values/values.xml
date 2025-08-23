@@ -18,10 +18,11 @@
     <string name="black_theme">Black theme</string>
     <string name="enable_material_you">Use system colors</string>
     <string name="hue_shift">Hue shift</string>
+    <string name="saturation_shift">Saturation shift</string>
     <string name="reset_hue_shift">Reset hue shift</string>
     <string name="language">Language</string>
     <string name="language_english">English</string>
-    <string name="language_arabic">Arabic</string>
+    <string name="language_arabic">العربية</string>
     <string name="language_turkish">Türkçe</string>
     <string name="language_system">System default</string>
     <string name="community_and_contribution">Community and Contribution</string>

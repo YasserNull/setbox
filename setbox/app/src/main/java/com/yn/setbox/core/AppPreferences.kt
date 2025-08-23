@@ -21,6 +21,7 @@ class AppPreferences(private val context: Context) {
         private val BLACK_THEME_KEY = booleanPreferencesKey("black_theme_key")
         private val MATERIAL_YOU_KEY = booleanPreferencesKey("material_you_key")
         private val HUE_SHIFT_KEY = floatPreferencesKey("hue_shift_key")
+        private val SATURATION_SHIFT_KEY = floatPreferencesKey("saturation_shift_key")
         private val MODULES_ENABLED_KEY = stringSetPreferencesKey("modules_enabled_key")
     }
 
@@ -95,6 +96,17 @@ class AppPreferences(private val context: Context) {
     fun getHueShift(): Flow<Float> {
         return context.dataStore.data.map { preferences ->
             preferences[HUE_SHIFT_KEY] ?: 0f
+        }
+    }
+    suspend fun saveSaturationShift(shift: Float) {
+        context.dataStore.edit { preferences ->
+            preferences[SATURATION_SHIFT_KEY] = shift
+        }
+    }
+
+    fun getSaturationShift(): Flow<Float> {
+        return context.dataStore.data.map { preferences ->
+            preferences[SATURATION_SHIFT_KEY] ?: 0f
         }
     }
 }

@@ -26,6 +26,7 @@ fun Theme(
     isBlackThemeEnabled: Boolean,
     isMaterialYouEnabled: Boolean,
     hueShift: Float,
+    saturationShift: Float,
     content: @Composable () -> Unit
 ) {
     val useDarkTheme = when (currentTheme) {
@@ -49,7 +50,8 @@ fun Theme(
     val preBlackThemeScheme = if (isMaterialYouEnabled) {
         baseColorScheme
     } else {
-        applyHueShiftToScheme(baseColorScheme, hueShift)
+        val hueAdjustedScheme = applyHueShiftToScheme(baseColorScheme, hueShift)
+        applySaturationShiftToScheme(hueAdjustedScheme, saturationShift)
     }
 
     // الخطوة 3: تطبيق الثيم الأسود (AMOLED) فوق اللوحة الناتجة إذا كان مفعلاً.
@@ -110,11 +112,50 @@ fun Theme(
     )
 }
 
+// دالة جديدة لتطبيق تغيير تشبع اللون على لوحة الألوان.
+fun applySaturationShiftToScheme(colorScheme: ColorScheme, saturationShift: Float): ColorScheme {
+    if (saturationShift == 0f) return colorScheme
+    return colorScheme.copy(
+        primary = adjustSaturation(colorScheme.primary, saturationShift),
+        onPrimary = adjustSaturation(colorScheme.onPrimary, saturationShift),
+        primaryContainer = adjustSaturation(colorScheme.primaryContainer, saturationShift),
+        onPrimaryContainer = adjustSaturation(colorScheme.onPrimaryContainer, saturationShift),
+        secondary = adjustSaturation(colorScheme.secondary, saturationShift),
+        onSecondary = adjustSaturation(colorScheme.onSecondary, saturationShift),
+        secondaryContainer = adjustSaturation(colorScheme.secondaryContainer, saturationShift),
+        onSecondaryContainer = adjustSaturation(colorScheme.onSecondaryContainer, saturationShift),
+        tertiary = adjustSaturation(colorScheme.tertiary, saturationShift),
+        onTertiary = adjustSaturation(colorScheme.onTertiary, saturationShift),
+        tertiaryContainer = adjustSaturation(colorScheme.tertiaryContainer, saturationShift),
+        onTertiaryContainer = adjustSaturation(colorScheme.onTertiaryContainer, saturationShift),
+        background = adjustSaturation(colorScheme.background, saturationShift),
+        onBackground = adjustSaturation(colorScheme.onBackground, saturationShift),
+        surface = adjustSaturation(colorScheme.surface, saturationShift),
+        onSurface = adjustSaturation(colorScheme.onSurface, saturationShift),
+        surfaceVariant = adjustSaturation(colorScheme.surfaceVariant, saturationShift),
+        onSurfaceVariant = adjustSaturation(colorScheme.onSurfaceVariant, saturationShift),
+        error = adjustSaturation(colorScheme.error, saturationShift),
+        onError = adjustSaturation(colorScheme.onError, saturationShift),
+        errorContainer = adjustSaturation(colorScheme.errorContainer, saturationShift),
+        onErrorContainer = adjustSaturation(colorScheme.onErrorContainer, saturationShift),
+        outline = adjustSaturation(colorScheme.outline, saturationShift)
+    )
+}
+
 // دالة مساعدة لتعديل درجة اللون (Hue) للون معين.
  fun adjustHue(color: Color, adjustment: Float): Color {
     val hsl = color.toHsl()
     val newHue = (hsl[0] + adjustment + 360f) % 360f
     return hslToColor(newHue, hsl[1], hsl[2])
+}
+
+// دالة مساعدة جديدة لتعديل تشبع اللون.
+fun adjustSaturation(color: Color, adjustment: Float): Color {
+    if (adjustment == 0f) return color
+    val hsl = color.toHsl()
+    val multiplier = 1.0f + (adjustment / 100.0f)
+    val newSaturation = (hsl[1] * multiplier).coerceIn(0f, 1f)
+    return hslToColor(hsl[0], newSaturation, hsl[2])
 }
 
 // تحويل اللون من RGB إلى HSL.

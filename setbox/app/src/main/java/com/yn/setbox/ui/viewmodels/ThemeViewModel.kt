@@ -23,6 +23,9 @@ class ThemeViewModel(private val preferences: AppPreferences) : ViewModel() {
     private val _hueShift = mutableStateOf(0f)
     val hueShift: State<Float> = _hueShift
 
+    private val _saturationShift = mutableStateOf(0f)
+    val saturationShift: State<Float> = _saturationShift
+    
     init {
         // مراقبة التغييرات في DataStore لتحديث حالة الواجهة تلقائيًا.
         viewModelScope.launch {
@@ -43,6 +46,11 @@ class ThemeViewModel(private val preferences: AppPreferences) : ViewModel() {
         viewModelScope.launch {
             preferences.getHueShift().collect { shift ->
                 _hueShift.value = shift
+            }
+        }
+        viewModelScope.launch {
+            preferences.getSaturationShift().collect { shift ->
+                _saturationShift.value = shift
             }
         }
     }
@@ -69,6 +77,12 @@ class ThemeViewModel(private val preferences: AppPreferences) : ViewModel() {
     fun setHueShift(shift: Float) {
         viewModelScope.launch {
             preferences.saveHueShift(shift)
+        }
+    }
+    
+    fun setSaturationShift(shift: Float) {
+        viewModelScope.launch {
+            preferences.saveSaturationShift(shift)
         }
     }
 }

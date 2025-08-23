@@ -40,7 +40,8 @@ class SettingsActivity : ComponentActivity() {
                 currentTheme = themeViewModel.currentTheme.value,
                 isBlackThemeEnabled = themeViewModel.isBlackThemeEnabled.value,
                 isMaterialYouEnabled = themeViewModel.isMaterialYouEnabled.value,
-                hueShift = themeViewModel.hueShift.value
+                hueShift = themeViewModel.hueShift.value, 
+                saturationShift = themeViewModel.saturationShift.value
             ) {
                 // الحصول على لوحة الألوان وحالة الثيم الداكن لتطبيقها على أشرطة النظام.
                 val colorScheme = MaterialTheme.colorScheme

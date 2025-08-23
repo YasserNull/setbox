@@ -67,7 +67,8 @@ fun AppToolbarActionsPreview() {
         currentTheme = AppTheme.SYSTEM,
         isBlackThemeEnabled = false,
         isMaterialYouEnabled = true,
-        hueShift = 0f
+        hueShift = 0f, 
+        saturationShift = 0f
     ) {
         AppToolbarActions(onSettingsClick = {}, onInstallFromZipClick = {})
     }

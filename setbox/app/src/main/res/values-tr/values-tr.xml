@@ -8,7 +8,7 @@
     <string name="module_apply_failed">Modül ayarları uygulanamadı.</string>
     <string name="uninstall">Kaldır</string>
     <string name="more_options">Diğer seçenekler</string>
-    <string name="install_from_zip">ZIP'den yükle</string>
+    <string name="install_from_zip">ZIP\'den yükle</string>
     <string name="settings">Ayarlar</string>
     <string name="back">Geri</string>
     <string name="theme">Tema</string>
@@ -18,16 +18,14 @@
     <string name="black_theme">Siyah tema</string>
     <string name="enable_material_you">Sistem renklerini kullan</string>
     <string name="hue_shift">Renk tonu kaydırması</string>
+    <string name="saturation_shift">Doygunluk kaydırması</string>
     <string name="reset_hue_shift">Renk tonu kaydırmasını sıfırla</string>
     <string name="language">Dil</string>
-    <string name="language_english">İngilizce</string>
-    <string name="language_arabic">Arapça</string>
-    <string name="language_turkish">Türkçe</string>
     <string name="language_system">Sistem varsayılanı</string>
     <string name="community_and_contribution">Topluluk ve Katkı</string>
     <string name="source_code">Kaynak kodu</string>
     <string name="contribute_to_modules">Modüllere katkıda bulunun</string>
-    <string name="repository_url_not_found">Depo URL'si bulunamadı.</string>
+    <string name="repository_url_not_found">Depo URL\'si bulunamadı.</string>
     <string name="repo_file_empty">Depo dosyası boş veya hatalı biçimlendirilmiş.</string>
     <string name="repo_load_failed">Depo yüklenemedi. İnternet bağlantınızı kontrol edin.</string>
     <string name="unknown_error_occurred">Bilinmeyen bir hata oluştu.</string>
@@ -42,7 +40,7 @@
     <string name="search_modules_placeholder">Modüllerde ara…</string>
     <string name="clear_search">Aramayı temizle</string>
     <string name="error_opening_link">Bağlantı açılırken hata: %1$s</string>
-    <string name="invalid_repository_url">Geçersiz depo URL'si.</string>
+    <string name="invalid_repository_url">Geçersiz depo URL\'si.</string>
     <string name="plugin_not_installed_banner">Eklenti yüklü değil. Almak için buraya tıklayın.</string>
     <string name="app_not_activated_banner">Uygulama etkinleştirilmedi. Yardım için buraya tıklayın.</string>
     <string name="select_language">Dil Seçin</string>
@@ -51,8 +49,8 @@
     <string name="restart_message">Dil değişikliklerini uygulamak için uygulamanın yeniden başlatılması gerekiyor.</string>
     <string name="cancel">İptal</string>
     <string name="restart">Yeniden başlat</string>
-    <string name="activate_app_title">SetBox'u Etkinleştir</string>
-    <string name="activate_app_description_adb">SetBox'un çalışması için WRITE_SECURE_SETTINGS izni gereklidir. Bu izin, bilgisayarınızda ADB (Android Debug Bridge) aracılığıyla verilebilir. Cihazınızı bağlayın ve aşağıdaki komutu çalıştırın:</string>
+    <string name="activate_app_title">SetBox\'u Etkinleştir</string>
+    <string name="activate_app_description_adb">SetBox\'un çalışması için WRITE_SECURE_SETTINGS izni gereklidir. Bu izin, bilgisayarınızda ADB (Android Debug Bridge) aracılığıyla verilebilir. Cihazınızı bağlayın ve aşağıdaki komutu çalıştırın:</string>
     <string name="github_details">Detaylar için GitHub</string>
     <string name="install_success">Modül başarıyla yüklendi!</string>
     <string name="install_failed">Modül yüklemesi başarısız.</string>

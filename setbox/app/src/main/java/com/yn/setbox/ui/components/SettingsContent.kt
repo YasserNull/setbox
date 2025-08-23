@@ -136,6 +136,7 @@ fun ThemeSettingsSection(themeViewModel: ThemeViewModel) {
     val isBlackThemeEnabled by themeViewModel.isBlackThemeEnabled
     val isMaterialYouEnabled by themeViewModel.isMaterialYouEnabled
     val hueShift by themeViewModel.hueShift
+    val saturationShift by themeViewModel.saturationShift
 
     Box(
         modifier = Modifier
@@ -185,11 +186,17 @@ fun ThemeSettingsSection(themeViewModel: ThemeViewModel) {
 
     // إظهار شريط تغيير اللون فقط إذا كان Material You معطلاً.
     AnimatedVisibility(visible = !isMaterialYouEnabled) {
-        HueShiftSlider(
-            hueShift = hueShift,
-            onHueShiftChanged = { newShift -> themeViewModel.setHueShift(newShift) },
-            currentTheme = currentTheme
-        )
+        Column {
+            HueShiftSlider(
+                hueShift = hueShift,
+                onHueShiftChanged = { newShift -> themeViewModel.setHueShift(newShift) },
+                currentTheme = currentTheme
+            )
+            SaturationShiftSlider(
+                saturationShift = saturationShift,
+                onSaturationShiftChanged = { newShift -> themeViewModel.setSaturationShift(newShift) }
+            )
+        }
     }
 }
 
@@ -316,6 +323,49 @@ fun HueShiftSlider(
     }
 }
 
+// شريط تمرير جديد لتغيير تشبع اللون.
+@Composable
+fun SaturationShiftSlider(
+    saturationShift: Float,
+    onSaturationShiftChanged: (Float) -> Unit
+) {
+    var localSliderPosition by remember(saturationShift) { mutableStateOf(saturationShift) }
+
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(horizontal = 16.dp, vertical = 8.dp)
+    ) {
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.SpaceBetween,
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Text(stringResource(R.string.saturation_shift))
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Text(
+                    text = "${localSliderPosition.roundToInt()}",
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.primary
+                )
+                IconButton(onClick = { onSaturationShiftChanged(0f) }) {
+                    Icon(Icons.Default.Refresh, stringResource(R.string.reset_hue_shift)) 
+                }
+            }
+        }
+        Slider(
+            value = localSliderPosition,
+            onValueChange = { newPosition -> localSliderPosition = newPosition },
+            onValueChangeFinished = { onSaturationShiftChanged(localSliderPosition) },
+            valueRange = -100f..200f,
+            colors = SliderDefaults.colors(
+                thumbColor = MaterialTheme.colorScheme.primary,
+                activeTrackColor = MaterialTheme.colorScheme.primary.copy(alpha = 0.7f),
+                inactiveTrackColor = MaterialTheme.colorScheme.surfaceVariant
+            )
+        )
+    }
+}
 @Preview(showBackground = true)
 @Composable
 fun SettingsContentPreview() {
@@ -323,7 +373,8 @@ fun SettingsContentPreview() {
         currentTheme = AppTheme.SYSTEM,
         isBlackThemeEnabled = false,
         isMaterialYouEnabled = true,
-        hueShift = 0f
+        hueShift = 0f, 
+        saturationShift = 0f
     ) {
         SettingsContent(modifier = Modifier.padding(PaddingValues(0.dp)), onLanguageChangeConfirmed = {})
     }
